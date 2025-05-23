@@ -133,7 +133,7 @@ class syntax_plugin_pdfjs extends DokuWiki_Syntax_Plugin {
      */
     private function _html_embed_pdfjs($opts) {
         // make reference link
-        $src = DOKU_URL . 'lib/plugins/pdfjs/pdfjs/web/viewer.html';
+        $src = DOKU_BASE . 'lib/plugins/pdfjs/pdfjs/web/viewer.html';
         $src .= '?file=' . rawurlencode(ml($opts['id']));
         if($opts['display'] == 'tab') {
             $html = '<a href="' . $src . '" class="media mediafile mf_pdf"';
